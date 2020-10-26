@@ -20,8 +20,6 @@ func (kelas Kelas) Create() interface{}{
 
 //findAll
 func (kelas Kelass) FindAll() interface{} {
-	// var account Account
-	// config.Db.Find(&account, Kelass[0].AccountId)
 	fmt.Println()
 	result := config.Db.Find(&kelas)
 	if result.Error != nil {
@@ -33,8 +31,6 @@ func (kelas Kelass) FindAll() interface{} {
 
 //findOne
 func (kelas Kelas) FindOne() interface{} {
-	// var account Account
-	// config.Db.Find(&account, Kelass[0].AccountId)
 	fmt.Println()
 	result := config.Db.Find(&kelas)
 	if result.Error != nil {

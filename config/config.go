@@ -6,7 +6,7 @@ import(
 	"belajar/RestAPiMYSQL/model"
 )
 
-var Db, Err = gorm.Open("mysql", "root:@/sekolah")
+var Db, Err = gorm.Open("mysql", "root:@/sekolah") //sekolah adalah nama database nya
 
 func init(){
 	if Err != nil{
@@ -17,7 +17,7 @@ func init(){
 	var siswa model.Siswa
 	var kelas model.Kelas
 
-	//migrate
+	//migrate -- membuat table otomatis
 	Db.AutoMigrate(&siswa)
 	Db.AutoMigrate(&kelas)
 }
